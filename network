@@ -7,13 +7,16 @@
 #####################################
 
 #this scripts will show your network interface, mac address and ip address in a chart.
+if [ -f /sbin/ifconfig ] ;
+    then echo "ifconfig exists" ;
+    fi
 
 divider=========================================
 divider=$divider$divider
 
 ##format strings for printf
 header="\n %-10s %11s  %10s\n"
-format="%-10s %11.2f %10.2f\n"
+format="%-10s %10s %10s\n"
 
 #width of divider
 totalwidth=44
