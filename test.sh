@@ -1,5 +1,15 @@
 #!/bin/bash
+#set -x
+#####################################
+#creator: Daniel Poterman
+#date: 27/02/19
+#version: 0.0.1
+#####################################
 
+#this scripts will show your network interface, mac address and ip address in a chart.
+if [ -f /sbin/ifconfig ] ;
+    then echo "ifconfig exists" ;
+fi
 
 
 #for iface in $(ifconfig | cut -d ' ' -f1| tr '\n' ' ')
