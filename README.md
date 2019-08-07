@@ -1,2 +1,2 @@
 # Scripts
-home work scripts 
+homework scripts 
