@@ -6,6 +6,9 @@
 #Purpose: Automatic CentOS First Configuration
 ################################################
 
+#Connecting to internet
+sudo dhclient
+
 #Updating OS
 sudo yum -y update
 
