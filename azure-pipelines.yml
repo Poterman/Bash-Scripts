@@ -29,6 +29,7 @@ steps:
           {
             "pattern": "global-generic-local",
             "target": "bash_scripts"
+          }
         ]
       }
     collectBuildInfo: true
