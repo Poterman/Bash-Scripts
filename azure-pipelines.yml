@@ -27,8 +27,8 @@ steps:
       {
         "files": [
           {
-            "pattern": "global-generic-local",
-            "target": "bash_scripts"
+            "pattern": "bash_scripts/*.sh",
+            "target": "global-generic-local/bash_scripts"
           }
         ]
       }
