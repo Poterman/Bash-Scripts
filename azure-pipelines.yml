@@ -11,13 +11,6 @@ pool:
   name: default
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
 - task: JFrogGenericArtifacts@1
   inputs:
     command: 'Upload'
@@ -27,12 +20,14 @@ steps:
       {
         "files": [
           {
-            "pattern": "files/*.sh",
-            "target": "global-generic-local/files"
+            "pattern": "*.sh",
+            "target": "global-generic-local"
           }
         ]
       }
-    collectBuildInfo: true
+    failNoOp: true
+- task: JFrogPublishBuildInfo@1
+  inputs:
+    artifactoryConnection: 'artifactory-test'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    failNoOp: true
