@@ -12,13 +12,17 @@ At the beggining of the script, you can determine the values and parameters it w
 For example: **freeStoragePercentageLimit=30** means you will see alerts on evenry database that has less than 30% free storage space left. 
 It will also calculate the remaining free storage percentage and will print that as well:
 
+```bash
 "- Note, this instance has less than 30% storage left"
 "  Storage left - 25%"
+```
 
 Next, we can check if Multi AZ is enabled for each database instance or not by setting the **checkMultiAZ** variable to **"yes"**. If left unset or with any other value, it will be skipped:
 **checkMultiAZ = "yes"**
 If the instance does not have Multi AZ configured, it will print this meesage:
+```bash
 "- This instance does not have Multi AZ configured"
+````
 
 Next, we are able to check the PSQL Major and minor versions by setting the **checkPsqlMajorVersion** and **checkPsqlMinorVersion** variables to **"yes"**. 
 Similarily to Multi AZ. if these are unset or set to anything else than "yes" the tests will be skipped.
@@ -27,12 +31,16 @@ We then specify the major and minor versions we are interested in as the followi
 psqlMinorVersion = "13.9"**
 
 The results will be printed as such:
+```bash
 "- This instance is running with PostgreSQL Major version 12"
 "- This instance is running with PostgreSQL version 13.9"
+```
 
 Lastly, we are also checking if the instance Storage Autoscaling is disabled. 
 If it is, a messasge will be printed:
+```bash
 "- Storage Autoscaling is Disabled"
+```
 
 # Example of the script output:
 ```bash
